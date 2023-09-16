@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="real.css">
+</head>
+<body>
+<div class="tab">
+    <button class="tablinks" onclick="openTab('Registrasi')" id="defaultOpen">Registrasi</button>
+    <button class="tablinks" onclick="openTab('ListPendaftar')" id="defaultOpen">List Pendaftar</button>
+</div>
+
+<div id="Regist" class="tab">
+    <h3>Form Regist</h3>
+    <form id="formRegist" onsubmit="return validateForm()">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" minlength="10" required><br><br>
+
+        <label for="umur">Umur</label>
+        <input type="umur" id="umur" name="umur" min="25" required><br><br>
+
+        <label for="uang">Uang</label>
+        <input type="number" id="uang" name="uang" min="100000" max="1000000" required><br><br>
+
+        <input type="submit" value="submit">
+    </form>
+</div>
+
+<div id="ListPendaftar" class="tab">
+    <table id="listTable">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Uang</th>
+            </tr>
+        </thead>
+        <tbody id="listData"></tbody>
+    </table>
+    <div id="resume"></div>
+</div>
+<script src="real.js">
+</script>
+</body>
+</html> 
